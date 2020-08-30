@@ -1,10 +1,19 @@
 var tasks = {};
 
+$(document).ready(function(){
 
-// Gets current time and updates the #currentDay element
-function timeContent(){
-    rightNow = moment();
-    $('#currentDay').text(rightNow);
-}
+    // Loads from local storage
 
-setInterval(timeContent(), 1000);
+    // Gets current time and updates the #currentDay element
+    var timeContent = function(){
+        rightNow = moment();
+        $('#currentDay').text(rightNow);
+    }
+    
+    
+
+
+    setInterval(timeContent, 1000);
+})
+
+

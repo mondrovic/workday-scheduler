@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- APIs -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -18,6 +20,9 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
+
+    <!-- Local CSS -->
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -25,14 +30,83 @@
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p class="lead mb-4">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
+      <!-- Sets the size for elements in each row and adds id's to access data later -->
+      <div class="row">
+        <!-- 9am -->
+        <div class="col-md-1 col-sm-2 hour pt-4">9:00am</div>
+        <input id="row-9am" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 saveBtn">
+          <img class="save-icon" src="https://via.placeholder.com/50" alt="save">
+        </div>
+
+        <!-- 10am -->
+        <div class="col-md-1 col-sm-2 hour pt-4">10:00am</div>
+        <input id="row-10am" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 saveBtn">
+          <img class="save-icon" src="https://via.placeholder.com/50" alt="save">
+        </div>
+
+        <!-- 11am -->
+        <div class="col-md-1 col-sm-2 hour pt-4">11:00am</div>
+        <input id="row-11am" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 saveBtn">
+          <img class="save-icon" src="https://via.placeholder.com/50" alt="save">
+        </div>
+
+        <!-- 12pm -->
+        <div class="col-md-1 col-sm-2 hour pt-4">12:00pm</div>
+        <input id="row-12pm" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 saveBtn">
+          <img class="save-icon" src="https://via.placeholder.com/50" alt="save">
+        </div>
+
+        <!-- 1pm -->
+        <div class="col-md-1 col-sm-2 hour pt-4">1:00pm</div>
+        <input id="row-1pm" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 saveBtn">
+          <img class="save-icon" src="https://via.placeholder.com/50" alt="save">
+        </div>
+
+        <!-- 2pm -->
+        <div class="col-md-1 col-sm-2 hour pt-4">2:00pm</div>
+        <input id="row-2pm" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 saveBtn">
+          <img class="save-icon" src="https://via.placeholder.com/50" alt="save">
+        </div>
+
+        <!-- 3pm -->
+        <div class="col-md-1 col-sm-2 hour pt-4">3:00pm</div>
+        <input id="row-3pm" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 saveBtn">
+          <img class="save-icon" src="https://via.placeholder.com/50" alt="save">
+        </div>
+
+        <!-- 4pm -->
+        <div class="col-md-1 col-sm-2 hour pt-4">4:00pm</div>
+        <input id="row-4pm" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 saveBtn">
+          <img class="save-icon" src="https://via.placeholder.com/50" alt="save">
+        </div>
+
+        <!-- 5pm -->
+        <div class="col-md-1 col-sm-2 hour pt-4">5:00pm</div>
+        <input id="row-5pm" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 saveBtn">
+          <img class="save-icon" src="https://via.placeholder.com/50" alt="save">
+        </div>
+    </div>
     </div>
 
+    <!-- APIs -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <!-- Local -->
+    <script src="script.js"></script>
   </body>
 </html>

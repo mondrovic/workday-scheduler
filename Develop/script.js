@@ -18,31 +18,34 @@ $(document).ready(function(){
     var timeContent = function(){
         rightNow = moment().format('ddd MMMM DD -- hh:mm:ss a');
         $('#currentDay').text(rightNow);
-    }
-    
+    };    
     
     // takes all values from each row and parses them as ints to compare times
     for (var i = 0; i < 10; i++){
         var x = $('#row-' + i).attr("data-time");
         var y = parseInt(x);
 
-        if(moment().format('HH') === y){
+        if(moment().format('HH') == y){
             $('#row-' + i).addClass('present');
-        }else if(moment().format('HH') < y){
+        } else if(moment().format('HH') < y){
             $('#row-' + i).addClass('future');
-        }else if(moment().format('HH') > y){
+        } else if(moment().format('HH') > y){
             $('#row-' + i).addClass('past');
         };
-
-    // save button functions
-
-    // handler for click
-    
-
     }
 
+    // Creates handler for click for saving to local storage
+    var saveBtnHandler = function(){
+        var hour = $(this).attr('data-hour');
+        var userData = $('#row-' + hour).val().trim();
+        localstorage.setItem("hour", hour)
+        localStorage.setItem("userData", userData);
+    };
 
+    $('#saveBtn').on("click", saveBtnHandler);
+    
+    //keeps timer running in real time
     setInterval(timeContent, 1000);
-})
+});
 
 

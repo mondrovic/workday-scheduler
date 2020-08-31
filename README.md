@@ -20,3 +20,4 @@ Finally, the app recalls all information stored in the localstorage at the begin
 
 ## Website
 
+https://mondrovic.github.io/workday-scheduler/
